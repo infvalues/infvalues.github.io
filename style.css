@@ -154,11 +154,11 @@ img.center {
     color: white;
     padding: 8pt;
     width: 10%;
-    min-width: 500pt;
+    min-width: 250pt;
     text-align: center;
     text-decoration: none;
     display: block;
-    font-size: 20pt;
+    font-size: 24pt;
     margin: -2px auto;
     cursor: pointer;
 }
