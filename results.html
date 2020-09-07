@@ -23,9 +23,10 @@
     
     <script>
         const urlParams = new URLSearchParams(window.location.search);
-        x_axis  = parseFloat(urlParams.get("right"))
-        y_axis  = parseFloat(urlParams.get("auth"))
-        z_axis  = parseFloat(urlParams.get("prog"))
+        cap_axis  = parseFloat(urlParams.get("cap"))
+        auth_axis  = parseFloat(urlParams.get("auth"))
+        nat_axis  = parseFloat(urlParams.get("nat"))
+        trad_axis  = parseFloat(urlParams.get("trad"))
     
         window.onload = function() {
             var background = new Image();
@@ -37,21 +38,10 @@
                 ctx.fillStyle = "#EEEEEE"
                 ctx.fillRect(0, 0, 1850, 1600);
                 ctx.drawImage(background, 0, 0);
-    
-                var dot = c.getContext("2d");
-                dot.beginPath();
-                dot.arc(200 + (1000 * (x_axis+10)/20), 1150 - (1000 * (y_axis + 10)/20), 25, 0, 2 * Math.PI);
-                dot.fillStyle = 'red';
-                dot.fill();
-                dot.stroke();
-    
-                var line = c.getContext("2d");
-                line.beginPath();
-                line.moveTo(1500, 1145 - (1000 * (z_axis + 10)/20));
-                line.lineTo(1650, 1145 - (1000 * (z_axis + 10)/20));
-                line.lineWidth = 10;
-                line.strokeStyle = "red";
-                line.stroke();
+ 
+		ctx.beginPath();
+		ctx.fillStyle = "rgba(239, 239, 239, 0.49)";
+		ctx.fillRect((cap_axis + 100), 20, 100, 150);
   
     
                 document.getElementById("banner").src = c.toDataURL();
