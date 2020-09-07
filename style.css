@@ -30,9 +30,6 @@ p.value-description {
     text-indent: -16pt;
     margin-left: 20pt;
 }
-div {
-    display: inline-block;
-}
 p.question {
     margin: 16pt auto;
     color: #333333;
@@ -145,22 +142,6 @@ img.center {
     text-align: center;
     text-decoration: none;
     display: block;
-    font-size: 24pt;
-    margin: -2px auto;
-    cursor: pointer;
-}
-.quiz_button {
-    background-color: #2196f3;
-    font-family: 'Montserrat', sans-serif;
-    border: none;
-    border-radius: 8pt;
-    color: white;
-    padding: 8pt;
-    width: 10%;
-    min-width: 250pt;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
     font-size: 24pt;
     margin: -2px auto;
     cursor: pointer;
