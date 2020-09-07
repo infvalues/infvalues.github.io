@@ -160,7 +160,7 @@ img.center {
     min-width: 250pt;
     text-align: center;
     text-decoration: none;
-    display: inline;
+    display: inline-block;
     font-size: 24pt;
     margin: -2px auto;
     cursor: pointer;
