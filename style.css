@@ -30,6 +30,9 @@ p.value-description {
     text-indent: -16pt;
     margin-left: 20pt;
 }
+div {
+    display: inline-block;
+}
 p.question {
     margin: 16pt auto;
     color: #333333;
