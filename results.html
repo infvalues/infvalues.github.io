@@ -28,6 +28,16 @@
         auth_axis  = parseFloat(urlParams.get("auth"))
         nat_axis  = parseFloat(urlParams.get("nat"))
         trad_axis  = parseFloat(urlParams.get("trad"))
+        acc_axis  = parseFloat(urlParams.get("acc"))
+        relig_axis  = parseFloat(urlParams.get("relig"))
+        nonv_axis  = parseFloat(urlParams.get("nonv"))
+        noo_axis  = parseFloat(urlParams.get("noo"))
+        const_axis  = parseFloat(urlParams.get("const"))
+        inter_axis  = parseFloat(urlParams.get("inter"))
+        assi_axis  = parseFloat(urlParams.get("assi"))
+        prag_axis  = parseFloat(urlParams.get("prag"))
+        prud_axis  = parseFloat(urlParams.get("prud"))
+
     
         window.onload = function() {
 		
@@ -55,6 +65,21 @@
 	ctx.beginPath();
 	ctx.fillStyle = "rgba(240, 240, 240, 0.5)";
 	ctx.rect( (trad_axis * 42.5) + 415, 403, 122, 135);
+	ctx.fill();
+		
+	ctx.beginPath();
+	ctx.fillStyle = "rgba(240, 240, 240, 0.5)";
+	ctx.rect( (acc_axis * 42.5) + 415, 538, 122, 135);
+	ctx.fill();
+		
+	ctx.beginPath();
+	ctx.fillStyle = "rgba(240, 240, 240, 0.5)";
+	ctx.rect( (relig_axis * 42.5) + 415, 673, 122, 135);
+	ctx.fill();
+		
+	ctx.beginPath();
+	ctx.fillStyle = "rgba(240, 240, 240, 0.5)";
+	ctx.rect( (nonv_axis * 42.5) + 415, 808, 122, 135);
 	ctx.fill();
         }
         </script>
