@@ -41,6 +41,6 @@ questions =  [
     {"id": 38, "question": "Protests should be as peaceful as possible.", "effects": {"nonv": 1}},
     {"id": 39, "question": "Agression brings more negatives than positive.", "effects": {"nonv": 1}},
     {"id": 40, "question": "Violence is sometimes unavoidable in order to acheive real change.", "effects": {"nonv": -1}},
-    {"id": 41, "question": "'Terrorist Attacks' are not that bad, after all.", "effects": {"nonv": -1}},
+    {"id": 41, "question": "'Terrorist Attacks' are not as bad as what the general opinion thinks it is.", "effects": {"nonv": -1}},
 
 ];
