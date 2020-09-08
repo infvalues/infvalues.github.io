@@ -30,6 +30,7 @@
         trad_axis  = parseFloat(urlParams.get("trad"))
         acc_axis  = parseFloat(urlParams.get("acc"))
         relig_axis  = parseFloat(urlParams.get("relig"))
+        rad_axis  = parseFloat(urlParams.get("rad"))
         nonv_axis  = parseFloat(urlParams.get("nonv"))
         noo_axis  = parseFloat(urlParams.get("noo"))
         const_axis  = parseFloat(urlParams.get("const"))
@@ -79,7 +80,12 @@
 		
 	ctx.beginPath();
 	ctx.fillStyle = "rgba(240, 240, 240, 0.5)";
-	ctx.rect( (nonv_axis * 42.5) + 415, 808, 122, 135);
+	ctx.rect( (rad_axis * 42.5) + 415, 808, 122, 135);
+	ctx.fill();
+		
+	ctx.beginPath();
+	ctx.fillStyle = "rgba(240, 240, 240, 0.5)";
+	ctx.rect( (nonv_axis * 42.5) + 415, 943, 122, 135);
 	ctx.fill();
         }
         </script>
