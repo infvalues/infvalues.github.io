@@ -1,5 +1,5 @@
 questions =  [
-    {"id": 0, "question": "Communism is an unpractical system that will never work in practice.", "effects": {"cap": 1}},
+    {"id": 0, "question": "Corporations should have much more power.", "effects": {"cap": 2}},
     {"id": 1, "question": "Inheritance is a legitimate form of wealth.", "effects": {"cap": 1}},
     {"id": 2, "question": "Capitalism is the most successful and beneficial economic system yet.", "effects": {"cap": 1}},
     {"id": 3, "question": "The means of production should belong to the workers.", "effects": {"cap": -1}},
