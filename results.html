@@ -38,6 +38,12 @@
         assi_axis  = parseFloat(urlParams.get("assi"))
         prag_axis  = parseFloat(urlParams.get("prag"))
         prud_axis  = parseFloat(urlParams.get("prud"))
+        free_axis  = parseFloat(urlParams.get("free"))
+        pat_axis  = parseFloat(urlParams.get("pat"))
+        unru_axis  = parseFloat(urlParams.get("unru"))
+        imp_axis  = parseFloat(urlParams.get("imp"))
+        dec_axis  = parseFloat(urlParams.get("dec"))
+        nih_axis  = parseFloat(urlParams.get("nih"))
 
     
         window.onload = function() {
@@ -111,6 +117,46 @@
 	ctx.beginPath();
 	ctx.fillStyle = "rgba(240, 240, 240, 0.5)";
 	ctx.rect( (prag_axis * 34) + 415, 1618, 122, 135);
+	ctx.fill();
+
+	ctx.beginPath();
+	ctx.fillStyle = "rgba(240, 240, 240, 0.5)";
+	ctx.rect( (prud_axis * 34) + 415, 1753, 122, 135);
+	ctx.fill();
+		
+	ctx.beginPath();
+	ctx.fillStyle = "rgba(240, 240, 240, 0.5)";
+	ctx.rect( (free_axis * 34) + 415, 1888, 122, 135);
+	ctx.fill();
+		
+	ctx.beginPath();
+	ctx.fillStyle = "rgba(240, 240, 240, 0.5)";
+	ctx.rect( (pat_axis * 34) + 415, 2023, 122, 135);
+	ctx.fill();
+		
+	ctx.beginPath();
+	ctx.fillStyle = "rgba(240, 240, 240, 0.5)";
+	ctx.rect( (unru_axis * 34) + 415, 2158, 122, 135);
+	ctx.fill();
+
+	ctx.beginPath();
+	ctx.fillStyle = "rgba(240, 240, 240, 0.5)";
+	ctx.rect( (unru_axis * 34) + 415, 2158, 122, 135);
+	ctx.fill();
+		
+	ctx.beginPath();
+	ctx.fillStyle = "rgba(240, 240, 240, 0.5)";
+	ctx.rect( (imp_axis * 34) + 415, 2293, 122, 135);
+	ctx.fill();
+		
+	ctx.beginPath();
+	ctx.fillStyle = "rgba(240, 240, 240, 0.5)";
+	ctx.rect( (dec_axis * 34) + 415, 2428, 122, 135);
+	ctx.fill();
+		
+	ctx.beginPath();
+	ctx.fillStyle = "rgba(240, 240, 240, 0.5)";
+	ctx.rect( (nih_axis * 34) + 415, 2563, 122, 135);
 	ctx.fill();
         }
         </script>
