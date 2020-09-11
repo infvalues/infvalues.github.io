@@ -44,6 +44,18 @@
         imp_axis  = parseFloat(urlParams.get("imp"))
         dec_axis  = parseFloat(urlParams.get("dec"))
         nih_axis  = parseFloat(urlParams.get("nih"))
+        contra_axis  = parseFloat(urlParams.get("contra"))
+        gadsen_axis  = parseFloat(urlParams.get("gadsen"))
+        spir_axis  = parseFloat(urlParams.get("spir"))
+        lcen_axis  = parseFloat(urlParams.get("lcen"))
+        pron_axis  = parseFloat(urlParams.get("pron"))
+        clim_axis  = parseFloat(urlParams.get("clim"))
+        hors_axis  = parseFloat(urlParams.get("hors"))
+        ptax_axis  = parseFloat(urlParams.get("ptax"))
+        pmart_axis  = parseFloat(urlParams.get("pmart"))
+        consq_axis  = parseFloat(urlParams.get("consq"))
+        enth_axis  = parseFloat(urlParams.get("enth"))
+        ahs_axis  = parseFloat(urlParams.get("ahs"))
 
     
         window.onload = function() {
@@ -156,7 +168,17 @@
 		
 	ctx.beginPath();
 	ctx.fillStyle = "rgba(240, 240, 240, 0.5)";
-	ctx.rect( (nih_axis * 34) + 415, 2563, 122, 135);
+	ctx.rect( (nih_axis * 34) + 415, 2563, 120, 135);
+	ctx.fill();
+		
+	ctx.beginPath();
+	ctx.fillStyle = "rgba(240, 240, 240, 0.5)";
+	ctx.rect( (contra_axis * 34) + 415, 2683, 120, 135);
+	ctx.fill();
+		
+	ctx.beginPath();
+	ctx.fillStyle = "rgba(240, 240, 240, 0.5)";
+	ctx.rect( (gadsen_axis * 34) + 415, 2803, 120, 135);
 	ctx.fill();
         }
         </script>
