@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:400,700" rel="stylesheet">
     <link href='style.css' rel='stylesheet' type='text/css'>
@@ -5,192 +7,146 @@
     <link rel="icon" type="x-icon" href="icon.png">
     <link rel="shortcut icon" type="x-icon" href="icon.png">
     <meta charset="utf-8">
-    </head>
-    
-    <body>
+</head>
+<body>
     <h1>InfValues</h1>
     <hr>
-    
+
     <h1>Results</h1>
     <br>
-	    
-    <p style="width:50%;margin:-2px auto">Thanks for taking the test! Here are your results below. There are currently 45 Axes in the test. <b>This test is not completed yet.</b></p><br>
-	<canvas id="canvas" width="956" height="5807" style="border:1px solid #d3d3d3;"></canvas>
 
-    <p style="width:50%;margin:-2px auto">If you have any suggestions or opinions about this test, please fill in <a href="https://forms.gle/AA5aYwSb9MnHunMc8">this form</a>.</p></br>
-    <button class="button" onclick="location.href='index.html';" style="background-color: #2196f3;">Back</button> <br>
-	
+    <p style="width:50%;margin:-2px auto">
+        Thanks for taking the test! Here are your results below.
+        There are currently 45 Axes in the test. <b>This test is not completed yet.</b>
+    </p>
+    <br>
+
+    <canvas id="canvas" width="956" height="5807" style="border:1px solid #d3d3d3;"></canvas>
+
+    <p style="width:50%;margin:-2px auto">
+        If you have any suggestions or opinions about this test, please fill in <a href="https://forms.gle/AA5aYwSb9MnHunMc8">this form</a>.
+    </p>
+    </br>
+
+    <button class="button" onclick="location.href='index.html';" style="background-color: #2196f3;">Back</button>
+    <br>
+
     <img id="compass" src="compass.png" alt="Image" style="display: none;" />
 
     <script>
+        // rendering/scaling info
+        const renderConfig = {
+            // center (x-axis 0-point)
+            xCenter: 481,
+
+            // total x-axis width (containing values between scale start and scale end, around xCenter)
+            xWidth: 960, // note: image has last approx 5 pixels cut off on the right hand side
+
+            // 'width' of the scale (from lowest to highest possible value)
+            scaleSpan: 20, // (-10 .. 10)
+
+            // width of the marker box
+            markerWidth: 120,
+
+            // if true, the marker's edge would be touching end of scale at value=scaleMax
+            // if false, the marker would be centered around end of scale at value=scaleMax
+            markerKeepInside: false,
+        };
+
         const urlParams = new URLSearchParams(window.location.search);
-        cap_axis  = parseFloat(urlParams.get("cap"))
-        auth_axis  = parseFloat(urlParams.get("auth"))
-        nat_axis  = parseFloat(urlParams.get("nat"))
-        trad_axis  = parseFloat(urlParams.get("trad"))
-        acc_axis  = parseFloat(urlParams.get("acc"))
-        relig_axis  = parseFloat(urlParams.get("relig"))
-        rad_axis  = parseFloat(urlParams.get("rad"))
-        nonv_axis  = parseFloat(urlParams.get("nonv"))
-        noo_axis  = parseFloat(urlParams.get("noo"))
-        const_axis  = parseFloat(urlParams.get("const"))
-        inter_axis  = parseFloat(urlParams.get("inter"))
-        assi_axis  = parseFloat(urlParams.get("assi"))
-        prag_axis  = parseFloat(urlParams.get("prag"))
-        prud_axis  = parseFloat(urlParams.get("prud"))
-        free_axis  = parseFloat(urlParams.get("free"))
-        pat_axis  = parseFloat(urlParams.get("pat"))
-        unru_axis  = parseFloat(urlParams.get("unru"))
-        imp_axis  = parseFloat(urlParams.get("imp"))
-        dec_axis  = parseFloat(urlParams.get("dec"))
-        nih_axis  = parseFloat(urlParams.get("nih"))
-        contra_axis  = parseFloat(urlParams.get("contra"))
-        gadsen_axis  = parseFloat(urlParams.get("gadsen"))
-        spir_axis  = parseFloat(urlParams.get("spir"))
-        lcen_axis  = parseFloat(urlParams.get("lcen"))
-        pron_axis  = parseFloat(urlParams.get("pron"))
-        clim_axis  = parseFloat(urlParams.get("clim"))
-        hors_axis  = parseFloat(urlParams.get("hors"))
-        ptax_axis  = parseFloat(urlParams.get("ptax"))
-        pmart_axis  = parseFloat(urlParams.get("pmart"))
-        consq_axis  = parseFloat(urlParams.get("consq"))
-        enth_axis  = parseFloat(urlParams.get("enth"))
-        ahs_axis  = parseFloat(urlParams.get("ahs"))
 
-    
-        window.onload = function() {
-		
-	var c = document.getElementById("canvas");
-        var ctx = canvas.getContext("2d");
-        var img = document.getElementById("compass");
-        ctx.drawImage(img, 0, 0);
- 
-	var ctx = c.getContext("2d");
-	ctx.beginPath();
-	ctx.fillStyle = "rgba(240, 240, 240, 0.5)";
-	ctx.rect( (cap_axis * 34) + 415, 0, 122, 133);
-	ctx.fill();
-	
-	ctx.beginPath();
-	ctx.fillStyle = "rgba(240, 240, 240, 0.5)";
-	ctx.rect( (auth_axis * 34) + 415, 133, 122, 135);
-	ctx.fill();
-	
-	ctx.beginPath();
-	ctx.fillStyle = "rgba(240, 240, 240, 0.5)";
-	ctx.rect( (nat_axis * 34) + 415, 268, 122, 135);
-	ctx.fill();
-		
-	ctx.beginPath();
-	ctx.fillStyle = "rgba(240, 240, 240, 0.5)";
-	ctx.rect( (trad_axis * 34) + 415, 403, 122, 135);
-	ctx.fill();
-		
-	ctx.beginPath();
-	ctx.fillStyle = "rgba(240, 240, 240, 0.5)";
-	ctx.rect( (acc_axis * 34) + 415, 538, 122, 135);
-	ctx.fill();
-		
-	ctx.beginPath();
-	ctx.fillStyle = "rgba(240, 240, 240, 0.5)";
-	ctx.rect( (relig_axis * 34) + 415, 673, 122, 135);
-	ctx.fill();
-		
-	ctx.beginPath();
-	ctx.fillStyle = "rgba(240, 240, 240, 0.5)";
-	ctx.rect( (rad_axis * 34) + 415, 808, 122, 135);
-	ctx.fill();
-		
-	ctx.beginPath();
-	ctx.fillStyle = "rgba(240, 240, 240, 0.5)";
-	ctx.rect( (nonv_axis * 34) + 415, 943, 122, 135);
-	ctx.fill();
-		
-	ctx.beginPath();
-	ctx.fillStyle = "rgba(240, 240, 240, 0.5)";
-	ctx.rect( (noo_axis * 34) + 415, 1078, 122, 135);
-	ctx.fill();
-		
-	ctx.beginPath();
-	ctx.fillStyle = "rgba(240, 240, 240, 0.5)";
-	ctx.rect( (const_axis * 34) + 415, 1213, 122, 135);
-	ctx.fill();
-		
-	ctx.beginPath();
-	ctx.fillStyle = "rgba(240, 240, 240, 0.5)";
-	ctx.rect( (inter_axis * 34) + 415, 1348, 122, 135);
-	ctx.fill();
-		
-	ctx.beginPath();
-	ctx.fillStyle = "rgba(240, 240, 240, 0.5)";
-	ctx.rect( (assi_axis * 34) + 415, 1483, 122, 135);
-	ctx.fill();
-		
-	ctx.beginPath();
-	ctx.fillStyle = "rgba(240, 240, 240, 0.5)";
-	ctx.rect( (prag_axis * 34) + 415, 1618, 122, 135);
-	ctx.fill();
+        // create definition of rows to be displayed on the image
+        // contains: axis name (corresponding to URL), top y position and height of row
+        const rowList = [
+           // axisName,	y, 		height
+            [ 'cap',	0,		133 ],
+            [ 'auth',	133,	135 ],
+            [ 'nat',	268,	135 ],
+            [ 'trad',	403,	135 ],
+            [ 'acc',	538,	135 ],
+            [ 'relig',	673,	135 ],
+            [ 'rad',	808,	135 ],
+            [ 'nonv',	943,	135 ],
+            [ 'noo',	1078,	135 ],
+            [ 'const',	1213,	135 ],
+            [ 'inter',	1348,	135 ],
+            [ 'assi',	1478,	137 ],
+            [ 'prag',	1615,	138 ],
+            [ 'prud',	1753,	135 ],
+            [ 'free',	1888,	135 ],
+            [ 'pat',	2023,	134 ],
+            [ 'unru',	2157,	134 ],
+            [ 'imp',	2291,	134 ],
+            [ 'dec',	2425,	134 ],
+            [ 'nih',	2559,	135 ],
+            [ 'contra',	2694,	135 ],
+            [ 'gadsen',	2829,	135 ],
+            [ 'spir',	2964,	137 ],
+            [ 'lcen',	3101,	133 ],
+            /*
+            // todo:
+            'pron',
+            'incom',
+            'clim',
+            'hors',
+            'ptax',
+            'pmart',
+            'consq',
+            'enth',
+            'ahs',
+            ...
+            */
+        ] // transform the list into objects containing:
+          // axisName, y, height (from above), value (from URL)
+        .map(entry => {
+            const axisName = entry[0];
+            const urlValue = urlParams.get(axisName);
+            return {
+                axisName: axisName,
+                value: urlValue ? parseFloat(urlValue) : null,
+                y: entry[1],
+                height: entry[2]
+            };
+        });
 
-	ctx.beginPath();
-	ctx.fillStyle = "rgba(240, 240, 240, 0.5)";
-	ctx.rect( (prud_axis * 34) + 415, 1753, 122, 135);
-	ctx.fill();
-		
-	ctx.beginPath();
-	ctx.fillStyle = "rgba(240, 240, 240, 0.5)";
-	ctx.rect( (free_axis * 34) + 415, 1888, 122, 135);
-	ctx.fill();
-		
-	ctx.beginPath();
-	ctx.fillStyle = "rgba(240, 240, 240, 0.5)";
-	ctx.rect( (pat_axis * 34) + 415, 2023, 122, 135);
-	ctx.fill();
-		
-	ctx.beginPath();
-	ctx.fillStyle = "rgba(240, 240, 240, 0.5)";
-	ctx.rect( (unru_axis * 34) + 415, 2158, 122, 135);
-	ctx.fill();
-
-	ctx.beginPath();
-	ctx.fillStyle = "rgba(240, 240, 240, 0.5)";
-	ctx.rect( (unru_axis * 34) + 415, 2158, 122, 135);
-	ctx.fill();
-		
-	ctx.beginPath();
-	ctx.fillStyle = "rgba(240, 240, 240, 0.5)";
-	ctx.rect( (imp_axis * 34) + 415, 2293, 122, 135);
-	ctx.fill();
-		
-	ctx.beginPath();
-	ctx.fillStyle = "rgba(240, 240, 240, 0.5)";
-	ctx.rect( (dec_axis * 34) + 415, 2428, 122, 135);
-	ctx.fill();
-		
-	ctx.beginPath();
-	ctx.fillStyle = "rgba(240, 240, 240, 0.5)";
-	ctx.rect( (nih_axis * 34) + 415, 2563, 122, 130);
-	ctx.fill();
-		
-	ctx.beginPath();
-	ctx.fillStyle = "rgba(240, 240, 240, 0.5)";
-	ctx.rect( (contra_axis * 34) + 415, 2696, 122, 135);
-	ctx.fill();
-		
-	ctx.beginPath();
-	ctx.fillStyle = "rgba(240, 240, 240, 0.5)";
-	ctx.rect( (gadsen_axis * 34) + 415, 2831, 122, 135);
-	ctx.fill();
-		
-	ctx.beginPath();
-	ctx.fillStyle = "rgba(240, 240, 240, 0.5)";
-	ctx.rect( (spir_axis * 34) + 415, 2961, 122, 135);
-	ctx.fill();
-		
-	ctx.beginPath();
-	ctx.fillStyle = "rgba(240, 240, 240, 0.5)";
-	ctx.rect( (lcen_axis * 34) + 415, 3096, 122, 135);
-	ctx.fill();
+        function fillXCenteredRect(ctx, xCenter, y, width, height) {
+            ctx.fillRect(xCenter - width/2, y, width, height);
         }
-        </script>
-    </body>
-    
+
+        function drawRowHighlights(ctx, rowList, config) {
+            const xSpan = config.markerKeepInside
+                ? (config.xWidth - config.markerWidth)
+                : config.xWidth;
+
+            const scaleToPixelsRatio = xSpan / config.scaleSpan;
+
+            const rectWidth = config.markerWidth;
+
+            ctx.fillStyle = "rgba(225, 225, 225, 0.55)";
+
+            rowList
+                .filter(row => row.value !== null)
+                .forEach(row => {
+                    const x = config.xCenter + scaleToPixelsRatio * row.value;
+                    fillXCenteredRect(ctx, x, row.y, rectWidth, row.height);
+                });
+        }
+
+
+        window.onload = function() {
+            const img = document.getElementById("compass");
+            const c = document.getElementById("canvas");
+            const ctx = canvas.getContext("2d");
+
+
+            function redraw(canvas, ctx, img) {
+                ctx.drawImage(img, 0, 0);
+
+                drawRowHighlights(ctx, rowList, renderConfig);
+            }
+
+            redraw(c, ctx, img);
+        }
+    </script>
+</body>
+</html>
