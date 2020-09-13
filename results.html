@@ -74,8 +74,10 @@
 
             // if true, the marker's edge would be touching end of scale at value=scaleMax
             // if false, the marker would be centered around end of scale at value=scaleMax
-            markerKeepInside: false,
+            markerKeepInside: true,
 
+            // two dots will appear instead of a comparison arrow if the difference is
+            // smaller than this value in pixels
             compareJoinAtPixels: 15,
 
             compareArrowBackground: {
@@ -206,10 +208,13 @@
 
 
             rowList
-                .filter(row => row.value !== null && row.axisName in comparedValues)
+                .filter(row => row.axisName in comparedValues)
                 .forEach(row => {
-                    const x_my = config.xCenter + scaleToPixelsRatio * row.value
                     const x_theirs = config.xCenter + scaleToPixelsRatio * comparedValues[row.axisName];
+                    const x_my = row.value !== null
+                        ? config.xCenter + scaleToPixelsRatio * row.value
+                        : x_theirs;
+
                     const y = Math.round(row.y + row.height * 0.7);
                     drawCompareArrow(ctx, x_my, x_theirs, y, config.compareArrowBackground, config.compareJoinAtPixels);
                     drawCompareArrow(ctx, x_my, x_theirs, y, config.compareArrowForeground, config.compareJoinAtPixels);
