@@ -46,6 +46,7 @@
         nih_axis  = parseFloat(urlParams.get("nih"))
         contra_axis  = parseFloat(urlParams.get("contra"))
         gadsen_axis  = parseFloat(urlParams.get("gadsen"))
+        puni_axis  = parseFloat(urlParams.get("puni"))
         spir_axis  = parseFloat(urlParams.get("spir"))
         lcen_axis  = parseFloat(urlParams.get("lcen"))
         pron_axis  = parseFloat(urlParams.get("pron"))
@@ -184,27 +185,32 @@
 		
 	ctx.beginPath();
 	ctx.fillStyle = "rgba(240, 240, 240, 0.5)";
-	ctx.rect( (spir_axis * 34) + 415, 2965, 122, 135);
+	ctx.rect( (puni_axis * 34) + 415, 2965, 122, 135);
 	ctx.fill();
 		
 	ctx.beginPath();
 	ctx.fillStyle = "rgba(240, 240, 240, 0.5)";
-	ctx.rect( (lcen_axis * 34) + 415, 3100, 122, 134);
+	ctx.rect( (spri_axis * 34) + 415, 3100, 122, 134);
 	ctx.fill();
 		
 	ctx.beginPath();
 	ctx.fillStyle = "rgba(240, 240, 240, 0.5)";
-	ctx.rect( (pron_axis * 34) + 415, 3234, 122, 136);
+	ctx.rect( (lcen_axis * 34) + 415, 3234, 122, 136);
 	ctx.fill();
 		
 	ctx.beginPath();
 	ctx.fillStyle = "rgba(240, 240, 240, 0.5)";
-	ctx.rect( (incom_axis * 34) + 415, 3368, 122, 136);
+	ctx.rect( (pron_axis * 34) + 415, 3368, 122, 136);
 	ctx.fill();
 		
 	ctx.beginPath();
 	ctx.fillStyle = "rgba(240, 240, 240, 0.5)";
-	ctx.rect( (clisk_axis * 34) + 415, 4000, 122, 135);
+	ctx.rect( (incom_axis * 34) + 415, 3504, 122, 135);
+	ctx.fill();
+		
+	ctx.beginPath();
+	ctx.fillStyle = "rgba(240, 240, 240, 0.5)";
+	ctx.rect( (clim_axis * 34) + 415, 3639, 122, 135);
 	ctx.fill();
 		
 	ctx.beginPath();
