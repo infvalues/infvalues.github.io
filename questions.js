@@ -157,5 +157,11 @@ questions =  [
     {"id": 142, "question": "Some words should be changed in order to increase inclusivity.", "effects": {"ahs": 1}},
     {"id": 143, "question": "The freedom of speech needs to protected.", "effects": {"ahs": -1}},
     {"id": 144, "question": "Any person should be able to say whatever they want without consequences.", "effects": {"ahs": -1}},
+    {"id": 145, "question": "Most decisions should be made according to logic, even if it makes people unhappy.", "effects": {"fact": 1}},
+    {"id": 146, "question": "Some opinions are just truer than others.", "effects": {"fact": 1}},
+    {"id": 147, "question": "A decision is always bad if all people are against it.", "effects": {"fact": -1}},
+    {"id": 148, "question": "The population should not be too intellegent.", "effects": {"trpop": 1}},
+    {"id": 149, "question": "Every person should have access to basic education.", "effects": {"trpop": -1}},
+    {"id": 150, "question": "We should make many efforts to increase the intellegence of the population", "effects": {"trpop": -1}},
 
 ];
