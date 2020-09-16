@@ -162,6 +162,10 @@ questions =  [
     {"id": 147, "question": "A decision is always bad if all people are against it.", "effects": {"fact": -1}},
     {"id": 148, "question": "The population should not be too intellegent.", "effects": {"trpop": 1}},
     {"id": 149, "question": "Every person should have access to basic education.", "effects": {"trpop": -1}},
-    {"id": 150, "question": "We should make many efforts to increase the intellegence of the population", "effects": {"trpop": -1}},
+    {"id": 150, "question": "We should make many efforts to increase the intellegence of the population.", "effects": {"trpop": -1}},
+    {"id": 151, "question": "Weapons should be privatized through a free market.", "effects": {"wmar": 1}},
+    {"id": 152, "question": "Only corporations should have the ability to own weapons.", "effects": {"wmar": 1}},
+    {"id": 153, "question": "Certain weapons should be banned.", "effects": {"wmar": 1}},
+    {"id": 153, "question": "Under no pretext, every worker should own weapons.", "effects": {"wmar": -1}},
 
 ];
