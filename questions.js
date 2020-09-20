@@ -166,6 +166,13 @@ questions =  [
     {"id": 151, "question": "Weapons should be privatized through a free market.", "effects": {"wmar": 1}},
     {"id": 152, "question": "Only corporations should have the ability to own weapons.", "effects": {"wmar": 1}},
     {"id": 153, "question": "Certain weapons should be banned.", "effects": {"wmar": 1}},
-    {"id": 153, "question": "Under no pretext, every worker should own weapons.", "effects": {"wmar": -1}},
+    {"id": 153, "question": "Every worker should own weapons.", "effects": {"wmar": -1}},
+    {"id": 154, "question": "Free trade benefits both sides in most cases.", "effects": {"trade": 1}},
+    {"id": 155, "question": "Free trade is one of the best methods for an undeveloped country to escape poverty.", "effects": {"trade": 1}},
+    {"id": 156, "question": "The negative impacts of tariffs outweigh its positive impacts.", "effects": {"trade": -1}},
+    {"id": 157, "question": "Free trade often harms local businesses and workers.", "effects": {"trade": -1}},
+    {"id": 158, "question": "If a society becomes too open-minded, society would become unstable and unsafe.", "effects": {"cmind": 1}},
+    {"id": 159, "question": "Certain ideas cannot be tolerated in any context.", "effects": {"cmind": 1}},
+    {"id": 160, "question": "Freedom of thought is very important.", "effects": {"cmind": -1}},
 
 ];
