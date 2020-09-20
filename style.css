@@ -53,7 +53,7 @@ h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 72pt;
     text-align: center;
-    line-height: 72pt;
+    line-height: 1;
     margin-top: 0pt;
     margin-bottom: 0pt;
 }
@@ -61,7 +61,7 @@ h2 {
     color: #333333;
     font-family: 'Montserrat', sans-serif;
     font-size: 36pt;
-    line-height: 36pt;
+    line-height: 1;
     margin-top: 12pt;
     margin-bottom: 0pt;
 }
@@ -188,6 +188,58 @@ canvas {
     margin: 8pt;
     margin-left: auto;
     margin-right: auto;
-    max-width: 50%;
+    max-width: 75%;
 	min-width: 500pt;
+}
+
+.center-container {
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 880px) {
+    .center-container {
+        max-width: 85%;
+    }
+    h1 {
+        font-size: 60pt;
+    }
+    h2 {
+        font-size: 30pt;
+    }
+    body {
+        width: calc(100% - 4em - 20px);
+        border-width: 10px;
+    }
+    .button {
+        min-width: 80%;
+    }
+    canvas,
+    img.center,
+    .text_input,
+    .num_input,
+    .selection,
+    p.question {
+        max-width: 100%;
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .center-container {
+        max-width: 95%;
+    }
+    h1 {
+        font-size: 42pt;
+    }
+    h2 {
+        font-size: 24pt;
+    }
+    body {
+        width: calc(100% - 2em);
+        padding-left: 1em;
+        padding-right: 1em;
+        border-width: 0;
+    }
 }
