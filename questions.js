@@ -173,6 +173,14 @@ questions =  [
     {"id": 157, "question": "Free trade often harms local businesses and workers.", "effects": {"trade": -1}},
     {"id": 158, "question": "If a society becomes too open-minded, society would become unstable and unsafe.", "effects": {"cmind": 1}},
     {"id": 159, "question": "Certain ideas cannot be tolerated in any context.", "effects": {"cmind": 1}},
-    {"id": 160, "question": "Freedom of thought is very important.", "effects": {"cmind": -1}},
+    {"id": 160, "question": "Humans have more intrinsic value than animals.", "effects": {"poach": 1}},
+    {"id": 161, "question": "Killing animals for food isn't immoral.", "effects": {"poach": 1}},
+    {"id": 162, "question": "There should be stricter laws on killing animals.", "effects": {"poach": -1}},
+    {"id": 163, "question": "The workplace should be hierarchial.", "effects": {"hier": 1}},
+    {"id": 164, "question": "The owner of a business should own the means of production, because he took the risks of bankrupcy.", "effects": {"hier": 1}},
+    {"id": 165, "question": "Workplaces should be worker-owned.", "effects": {"hier": -1}},
+    {"id": 166, "question": "The interests of a nation's legal citizens are more important than the interests of immigrants.", "effects": {"open": -1}},
+    {"id": 167, "question": "Walls and fences should be set up in order to stop illegal immigration.", "effects": {"open": -1}},
+    {"id": 168, "question": "We should make immigration easier.", "effects": {"open": 1}},
 
 ];
