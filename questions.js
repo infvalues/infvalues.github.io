@@ -183,6 +183,6 @@ questions =  [
     {"id": 167, "question": "Walls and fences should be set up in order to stop illegal immigration.", "effects": {"open": -1}},
     {"id": 168, "question": "We should make immigration easier.", "effects": {"open": 1}},
     {"id": 168, "question": "I took this test unironically.", "effects": {"semir": 1}},
-    {"id": 168, "question": "The more layers of irony, the better.", "effects": {"semir": -1}},
+    {"id": 169, "question": "The more layers of irony, the better.", "effects": {"semir": -1}},
 
 ];
