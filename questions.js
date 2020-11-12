@@ -53,7 +53,7 @@ questions =  [
     {"id": 50, "question": "The best ideology is different for every nation.", "effects": {"inter": -1}},
     {"id": 51, "question": "Tyrannical governments should be toppled.", "effects": {"inter": -1}},
     {"id": 52, "question": "Intervention is generally beneficial.", "effects": {"inter": 1}},
-    {"id": 53, "question": "Globalization is inevitable, and it nust be embraced.", "effects": {"inter": 1}},
+    {"id": 53, "question": "Globalization is inevitable, and it must be embraced.", "effects": {"inter": 1}},
     {"id": 54, "question": "If certain people migrated into our countries, it's important for them to assimilate into our culture.", "effects": {"assi": 1}},
     {"id": 55, "question": "Each ethnicity should stay in their own communities.", "effects": {"assi": 1}},
     {"id": 56, "question": "It's important to be diverse at all times.", "effects": {"assi": -1}},
