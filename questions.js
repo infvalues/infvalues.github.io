@@ -4,7 +4,7 @@ questions =  [
     {"id": 2, "question": "Capitalism is the most successful and beneficial economic system yet.", "effects": {"cap": 1}},
     {"id": 3, "question": "The means of production should belong to the workers.", "effects": {"cap": -1}},
     {"id": 4, "question": "Basic utilities like roads and electricity should be publicly owned.", "effects": {"cap": -1, "ptax": 1}},
-    {"id": 5, "question": "A community should suffer the gains and loss toghether.", "effects": {"cap": -1}},
+    {"id": 5, "question": "A community should suffer the gains and loss together.", "effects": {"cap": -1}},
     {"id": 6, "question": "A strong and large government is the best for society.", "effects": {"auth": 1}},
     {"id": 7, "question": "Even when protesting an authoritarian government, violence cannot be accepted.", "effects": {"auth": 1}},
     {"id": 8, "question": "Law and Order is more important than freedom and liberty.", "effects": {"auth": 1}},    
@@ -53,8 +53,13 @@ questions =  [
     {"id": 50, "question": "The best ideology is different for every nation.", "effects": {"inter": -1}},
     {"id": 51, "question": "Tyrannical governments should be toppled.", "effects": {"inter": -1}},
     {"id": 52, "question": "Intervention is generally beneficial.", "effects": {"inter": 1}},
+<<<<<<< Updated upstream
     {"id": 53, "question": "Globalization is inevitable, so it must be embraced.", "effects": {"inter": 1}},
     {"id": 54, "question": "If certain people migrated into our country, it's important for them to assimilate into our culture.", "effects": {"assi": 1}},
+=======
+    {"id": 53, "question": "Globalization is inevitable, and it must be embraced.", "effects": {"inter": 1}},
+    {"id": 54, "question": "If certain people migrated into our countries, it's important for them to assimilate into our culture.", "effects": {"assi": 1}},
+>>>>>>> Stashed changes
     {"id": 55, "question": "Each ethnicity should stay in their own communities.", "effects": {"assi": 1}},
     {"id": 56, "question": "It's important to be diverse at all times.", "effects": {"assi": -1}},
     {"id": 57, "question": "Race and ethnicity shouldn't matter.", "effects": {"assi": -1}},
